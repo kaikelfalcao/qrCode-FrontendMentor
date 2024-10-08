@@ -2,7 +2,7 @@
 
 /* CSS Variablles */
 :root {
-    --background-color: #D6E1F0;
+    --background-color: hsl(212, 45%, 89%);
     --card-bg-color: hsl(0, 0%, 100%);
     --title-color: hsl(218, 44%, 22%);
     --text-color: hsl(216, 15%, 48%);
@@ -10,40 +10,50 @@
 
 body {
     background-color: var(--background-color);
-    font-size: 15px;
-    font-family: 'Outfit', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 .card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     background-color: var(--card-bg-color);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 18px;
+    box-shadow: -2px 9px 21px -10px rgba(0,0,0,0.75);
+    height: 499px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+    text-align: center;
 
-.card img {
-    width: 315px;
-    height: 300px;
-    border-radius: 10px;
-}
+    & img {
+        height: 288px;
+        border-radius: 10px;
+        margin: 16px;
+    }
 
-.card-content {
-    width: 280px;
-    text-align: center;   
-}
+    & .card-content {
+        width: 288px;
+        font-family: "Outfit", sans-serif;
 
-.card-title {
-    color: var(--title-color);
-}
+        & .card-title {
+            font-weight: 700;
+            font-size: 22px;
+            color: var(--title-color);
+            margin: 0px 16px 16px 16px;
+        }
 
-.card-description {
-    color: var(--text-color);
+        & .card-description {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 140%;
+            letter-spacing: 0.2px;
+            color: var(--text-color);
+            margin-left: 16px;
+            margin-right: 16px;
+        }
+    }
 }
